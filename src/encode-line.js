@@ -11,6 +11,9 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function encodeLine(str) {
+  if(!str) {
+    return ''
+  }
   let encodeStr = ''
   let count = 1
 
@@ -22,7 +25,7 @@ function encodeLine(str) {
       count = 1
     }
   }
-
+  encodeStr += count > 1 ? count + str[str.length - 1] : str[str.length - 1];
   return encodeStr
   // remove line with error and write your code here
 }
