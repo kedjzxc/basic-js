@@ -20,7 +20,7 @@ function createDreamTeam(members) {
       teamName += item.slice(0,1)
     }
   })
-  return teamName.split('').sort().join('')
+  return teamName.split('').sort().join('').trim()
   // remove line with error and write your code here
 }
 
