@@ -15,12 +15,19 @@ const { NotImplementedError } = require('../extensions/index.js');
  */
 function createDreamTeam(members) {
   let teamName = '';
-  members.forEach(item => {
-    if (typeof item == "string") {
-      teamName += item.slice(0,1)
+  // members.forEach(item => {
+  //   if (typeof item == "string") {
+      
+  //   }
+  // })
+  // return teamName.split('').sort().join('')
+
+  for (let i = 0; i < members.length; i++) {
+    if(typeof members[i] == 'string') {
+      teamName += members[i].trim().slice(0,1).toUpperCase()
     }
-  })
-  return teamName.split('').sort().join('').trim()
+  }
+  return teamName.split('').sort().join('')
   // remove line with error and write your code here
 }
 
